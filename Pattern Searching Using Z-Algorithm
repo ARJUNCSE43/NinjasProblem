@@ -1,0 +1,11 @@
+vector<int> search(string s, string pattern) {
+    // Write Your Code Here
+    vector<int>ans;
+    size_t pos=s.find(pattern);
+    while(pos!=string::npos)
+    {
+        ans.push_back(pos+1);
+        pos=s.find(pattern,pos+1);
+    }
+    return ans;
+}
